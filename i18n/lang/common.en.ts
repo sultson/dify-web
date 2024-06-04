@@ -7,7 +7,7 @@ const translation = {
   operation: {
     confirm: 'Confirm',
     cancel: 'Cancel',
-    clear: 'Clear',
+    clear: 'Verwijderen',
     save: 'Save',
     edit: 'Edit',
     refresh: 'Restart',

@@ -47,3 +47,5 @@ yarn.lock
 
 # pmpm
 pnpm-lock.yaml
+
+.history
