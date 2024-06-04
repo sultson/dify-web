@@ -40,9 +40,9 @@ const WorkflowProcessItem = ({
       return 'linear-gradient(180deg, #FEE4E2 0%, #FEF3F2 100%)'
   }, [running, succeeded, failed, collapse])
 
-  useEffect(() => {
-    setCollapse(!expand)
-  }, [expand])
+  // useEffect(() => {
+  //   setCollapse(!expand)
+  // }, [expand])
 
   return (
     <div

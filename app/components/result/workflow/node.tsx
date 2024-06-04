@@ -48,14 +48,14 @@ const NodePanel: FC<Props> = ({ nodeInfo, hideInfo = false }) => {
             hideInfo ? 'py-2' : 'py-3',
             !collapseState && (hideInfo ? '!pb-1' : '!pb-2'),
           )}
-          onClick={() => setCollapseState(!collapseState)}
+        // onClick={() => setCollapseState(!collapseState)}
         >
-          <ChevronRight
+          {/* <ChevronRight
             className={cn(
               'shrink-0 w-3 h-3 mr-1 text-gray-400 transition-all group-hover:text-gray-500',
               !collapseState && 'rotate-90',
             )}
-          />
+          /> */}
           <BlockIcon size={hideInfo ? 'xs' : 'sm'} className={cn('shrink-0 mr-2', hideInfo && '!mr-1')} type={nodeInfo.node_type} toolIcon={nodeInfo.extras?.icon || nodeInfo.extras} />
           <div className={cn(
             'grow text-gray-700 text-[13px] leading-[16px] font-semibold truncate',
