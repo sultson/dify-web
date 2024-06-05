@@ -10,6 +10,7 @@ import CSVReader from './csv-reader'
 import CSVDownload from './csv-download'
 import Button from '@/app/components/base/button'
 import Loading02 from '@/app/components/base/icons/line/loading-02'
+import { formatCsv } from '@/utils/CUSTOM_formatCsv'
 export type IRunBatchProps = {
   vars: { name: string }[]
   onSend: (data: string[][]) => void
@@ -26,8 +27,10 @@ const RunBatch: FC<IRunBatchProps> = ({
   const [csvData, setCsvData] = React.useState<string[][]>([])
   const [isParsed, setIsParsed] = React.useState(false)
   const handleParsed = (data: string[][]) => {
-    setCsvData(data)
-    // console.log(data)
+    console.log(data)
+    const formattedData = formatCsv(data, vars)
+    setCsvData(formattedData)
+    console.log(formattedData)
     setIsParsed(true)
   }
 
@@ -35,6 +38,7 @@ const RunBatch: FC<IRunBatchProps> = ({
     onSend(csvData)
   }
   const Icon = isAllFinished ? PlayIcon : Loading02
+
   return (
     <div className='pt-4'>
       <CSVReader onParsed={handleParsed} />
