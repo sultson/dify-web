@@ -6,7 +6,7 @@ export const IS_WORKFLOW = `${process.env.NEXT_PUBLIC_APP_TYPE_WORKFLOW}` === 't
 export const APP_INFO: AppInfo = {
   title: 'Productbeschrijving Maker',
   description: 'Agentics x OutdoorXL',
-  copyright: 'Agentix',
+  copyright: 'Agentics',
   privacy_policy: '',
   default_language: 'en',
 }
